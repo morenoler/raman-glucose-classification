@@ -1,0 +1,101 @@
+{
+  "task": "Glucose present (>0 µl) in a four-sugar mixture",
+  "seed": 42,
+  "spectral_range_cm_1": [
+    400,
+    1800
+  ],
+  "wavenumber_points": 517,
+  "train_wells": 183,
+  "test_wells": 62,
+  "train_spectra": 1464,
+  "high_test_spectra": 496,
+  "low_test_spectra": 1984,
+  "train_positive_rate": 0.7268,
+  "models": {
+    "dummy": {
+      "high": {
+        "balanced_accuracy": 0.5,
+        "f1": 0.8411,
+        "precision": 0.7258,
+        "recall": 1.0,
+        "roc_auc": 0.5,
+        "confusion_tn_fp_fn_tp": [
+          0,
+          136,
+          0,
+          360
+        ]
+      },
+      "low": {
+        "balanced_accuracy": 0.5,
+        "f1": 0.8411,
+        "precision": 0.7258,
+        "recall": 1.0,
+        "roc_auc": 0.5,
+        "confusion_tn_fp_fn_tp": [
+          0,
+          544,
+          0,
+          1440
+        ]
+      }
+    },
+    "logistic": {
+      "high": {
+        "balanced_accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "roc_auc": 1.0,
+        "confusion_tn_fp_fn_tp": [
+          136,
+          0,
+          0,
+          360
+        ]
+      },
+      "low": {
+        "balanced_accuracy": 0.9672,
+        "f1": 0.9809,
+        "precision": 0.9833,
+        "recall": 0.9785,
+        "roc_auc": 0.9953,
+        "confusion_tn_fp_fn_tp": [
+          520,
+          24,
+          31,
+          1409
+        ]
+      }
+    },
+    "forest": {
+      "high": {
+        "balanced_accuracy": 0.9779,
+        "f1": 0.9917,
+        "precision": 0.9836,
+        "recall": 1.0,
+        "roc_auc": 0.9997,
+        "confusion_tn_fp_fn_tp": [
+          130,
+          6,
+          0,
+          360
+        ]
+      },
+      "low": {
+        "balanced_accuracy": 0.6777,
+        "f1": 0.8898,
+        "precision": 0.8046,
+        "recall": 0.9951,
+        "roc_auc": 0.9701,
+        "confusion_tn_fp_fn_tp": [
+          196,
+          348,
+          7,
+          1433
+        ]
+      }
+    }
+  }
+}

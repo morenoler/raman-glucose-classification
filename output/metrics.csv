@@ -1,0 +1,7 @@
+model,domain,balanced_accuracy,f1,precision,recall,roc_auc
+dummy,high,0.5,0.8411,0.7258,1.0,0.5
+dummy,low,0.5,0.8411,0.7258,1.0,0.5
+logistic,high,1.0,1.0,1.0,1.0,1.0
+logistic,low,0.9672,0.9809,0.9833,0.9785,0.9953
+forest,high,0.9779,0.9917,0.9836,1.0,0.9997
+forest,low,0.6777,0.8898,0.8046,0.9951,0.9701
