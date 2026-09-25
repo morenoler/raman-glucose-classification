@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import json
+import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "output"
+SITE = ROOT / "docs"
 
 
 def main() -> None:
@@ -55,6 +57,10 @@ a{{color:#146e7a}}@media(max-width:700px){{.grid,.split{{grid-template-columns:1
 <p class='note'>Данные: <a href='https://github.com/Alvaro-FG/Raman_Sugars'>Raman_Sugars, Alvaro Fernandez Galiana et al.</a> Сырые спектры в этом репозитории не публикуются; скрипт загрузки закреплён на конкретной ревизии источника.</p></section>
 </main></body></html>"""
     (OUT / "report.html").write_text(page, encoding="utf-8")
+    SITE.mkdir(exist_ok=True)
+    (SITE / "index.html").write_text(page, encoding="utf-8")
+    for name in ("mean_spectra.png", "confusion_logistic_low.png"):
+        shutil.copyfile(OUT / name, SITE / name)
     print("Wrote", OUT / "report.html")
 
 
