@@ -2,7 +2,7 @@
 
 Задача: определить по рамановскому спектру, присутствует ли глюкоза в смеси сахарозы, фруктозы, мальтозы и воды. Метка берётся из рецептуры лунки: `Glucose [ul] > 0`. Это исследование на открытом наборе [Raman_Sugars](https://github.com/Alvaro-FG/Raman_Sugars), а не медицинский или промышленный классификатор.
 
-**[Отчёт с графиками](https://github.com/morenoler/raman-glucose-classification/blob/main/docs/report.pdf)** · [Таблица метрик](output/metrics.csv) · [Код эксперимента](src/train.py)
+**[Отчёт с графиками](https://github.com/morenoler/raman-glucose-classification/blob/main/docs/report.md)** · [Таблица метрик](output/metrics.csv) · [Код эксперимента](src/train.py)
 
 ![Проверки](https://github.com/morenoler/raman-glucose-classification/actions/workflows/checks.yml/badge.svg)
 
